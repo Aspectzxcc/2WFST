@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Two-Way FST Visualization</title>
+  <link href="styles.css" rel="stylesheet" type="text/css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.js"></script>
+  <script src="2WFST.js" defer></script>
+</head>
+<body>
+    <!-- Header -->
+    <h1>2 Way Finite State Transducer Simulator</h1>
+    <!-- Subheader -->
+    <h2>This machine duplicates the input string for the alphabet Σ = {A,B}*</h2>
+
+    <div class="wrapper">
+        <div id="network"></div>
+
+        <!-- Output display for step-by-step simulation -->
+        <div id="stepOutput"></div>
+    </div>
+
+    <!-- Input display for showing the current input being read -->
+    <div id="inputDisplay"></div>
+
+    <!-- Output display for overall result -->
+    <div id="output"></div>
+
+    <div>
+        <!-- Input box for state diagram -->
+        <input type="text" id="stateDiagramInput" placeholder="Enter your input...">
+        
+        <!-- Submit button -->
+        <button id="submitButton">Submit</button>
+
+        <!-- Step button (hidden initially) -->
+        <button id="stepButton" style="display: none;">Step</button>
+
+        <!-- Reset button (hidden initially) -->
+        <button id="resetButton" style="display: none;">Reset</button>
+    </div>
+</body>
+</html>
